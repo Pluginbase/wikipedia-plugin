@@ -1,0 +1,70 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Wikipedia Search API",
+      "version": "1.0.0",
+      "description": "API for searching Wikipedia articles and providing summaries."
+    },
+    "servers": [
+      {
+        "url": "https://harish-garg-obscure-space-meme-j7gq46qjp2vq4-8000.preview.app.github.dev",
+        "description": "Wikipedia search API server"
+      }
+    ],
+    "paths": {
+      "/search/{search_term}": {
+        "get": {
+          "summary": "Search Wikipedia for a specific term",
+          "operationId": "searchWikipedia",
+          "tags": [
+            "Wikipedia"
+          ],
+          "parameters": [
+            {
+              "name": "search_term",
+              "in": "path",
+              "required": true,
+              "description": "The search term to look up on Wikipedia",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Wikipedia search results",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WikipediaSearchResult"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "WikipediaSearchResult": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the Wikipedia page"
+            },
+            "summary": {
+              "type": "string",
+              "description": "A summary of the Wikipedia page"
+            },
+            "error": {
+              "type": "string",
+              "description": "Error message if no page is found"
+            }
+          }
+        }
+      }
+    }
+  }
+  

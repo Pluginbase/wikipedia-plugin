@@ -1,0 +1,19 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Wikipedia Search Plugin",
+    "name_for_model": "wikipedia",
+    "description_for_human": "Plugin for searching Wikipedia articles and providing summaries, you can search and view article summaries.",
+    "description_for_model": "Plugin for searching Wikipedia articles and providing summaries, you can search and view article summaries.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "https://harish-garg-obscure-space-meme-j7gq46qjp2vq4-8000.preview.app.github.dev/openapi.json",
+      "is_user_authenticated": false
+    },
+    "logo_url": "https://pluginbase.ai/logo.png",
+    "contact_email": "contact@pluginbase.ai",
+    "legal_info_url": "https://pluginbase.ai/"
+  }
+  
